@@ -1,11 +1,11 @@
-This project follow https://github.com/lvarayut/relay-fullstack
-for learn and recode to light and simple for understand.
+<pre>This project follow https://github.com/lvarayut/relay-fullstack
+for learn and recode to light and simple for understand.</pre>
 
-Update
-  I make server with graphql, Now It hard for me.
+<h4>Update</h4>
+<pre>  I make server with graphql, Now It hard for me.</pre>
 
-Test
-  URL localhost:3000/graphql
+<h4>Test</h4>
+<pre>  URL localhost:3000/graphql
 
   {
     user (id: "2") {
@@ -28,3 +28,4 @@ Test
       }
     }
   }
+</pre>
