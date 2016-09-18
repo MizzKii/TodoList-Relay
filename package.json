@@ -1,0 +1,44 @@
+{
+  "name": "relay",
+  "version": "1.0.0",
+  "description": "change to relay",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MizzKii/start-relay.git"
+  },
+  "engines": {
+    "node": "6.6.0",
+    "npm": "3.10.8"
+  },
+  "keywords": [
+    "relay",
+    "react",
+    "jsx",
+    "express",
+    "graphql"
+  ],
+  "author": "Panudech Chuangnuktum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MizzKii/start-relay/issues"
+  },
+  "homepage": "https://github.com/MizzKii/start-relay#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "connect-history-api-fallback": "^1.3.0",
+    "express": "^4.14.0",
+    "express-graphql": "^0.5.4",
+    "graphql": "^0.7.0",
+    "graphql-relay": "^0.4.3"
+  }
+}
