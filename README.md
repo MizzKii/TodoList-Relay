@@ -5,7 +5,7 @@
   node.js (recommend v6.6.0)
   npm (recommend v3.10.8)
 </pre>
-<br/><br/>
+
 <h4>Dependency</h4>
 <pre>
   babel
@@ -13,11 +13,11 @@
   express-graphql
   graphql
 </pre>
-<br/><br/>
+
 <h4>Update</h4>
 <pre>  I make graphql for TodoList.
 you can test on URL `http://localhost:3000/graphql`</pre>
-<br/><br/>
+
 <h4>Query</h4>
 <u>example</u>
 <pre>
@@ -34,7 +34,7 @@ you can test on URL `http://localhost:3000/graphql`</pre>
     }
   }
 </pre>
-<br/><br/>
+
 <h4>Mutation</h4>
 <u>example</u>
 <pre>
