@@ -17,8 +17,10 @@
 </pre>
 
 <h4>Update</h4>
-<pre>  I make graphql for TodoList.
-you can test on URL `http://localhost:3000/graphql`</pre>
+<pre>
+  Add mongodb to TodoList.
+  you can test on URL `http://localhost:3000/graphql`
+</pre>
 
 <h4>Query</h4>
 <u>example</u>
