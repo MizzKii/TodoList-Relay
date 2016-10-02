@@ -4,6 +4,7 @@
 <pre>
   node.js (recommend v6.6.0)
   npm (recommend v3.10.8)
+  mongodb
 </pre>
 
 <h4>Dependency</h4>
@@ -12,6 +13,7 @@
   express
   express-graphql
   graphql
+  mongoose
 </pre>
 
 <h4>Update</h4>
