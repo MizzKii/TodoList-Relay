@@ -1,5 +1,6 @@
 import {
   GraphQLNonNull,
+  GraphQLUnionType,
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
@@ -18,7 +19,7 @@ const Todo = new GraphQLObjectType({
   name: 'Todo',
   description: 'todo item description',
   fields: () => ({
-    id: { type: GraphQLInt },
+    id: { type: GraphQLString },
     title: { type: GraphQLString, description: 'title for todo item' },
     description: { type: GraphQLString, description: 'description for todo item' }
   })
@@ -40,7 +41,7 @@ const findTodo = {
 }
 
 const addTodo = {
-  type: new GraphQLList(Todo),
+  type: Todo,
   description: `new todo item`,
   args: {
     title: { type: new GraphQLNonNull(GraphQLString) },
@@ -53,7 +54,7 @@ const editTodo = {
   type: Todo,
   description: `edit todo item`,
   args: {
-    id: { type: new GraphQLNonNull(GraphQLInt) },
+    id: { type: new GraphQLNonNull(GraphQLString) },
     title: { type: GraphQLString },
     description: { type: GraphQLString }
   },
@@ -64,7 +65,7 @@ const deleteTodo = {
   type: new GraphQLList(Todo),
   description: `delete todo item`,
   args: {
-    id: { type: new GraphQLNonNull(GraphQLInt) }
+    id: { type: new GraphQLNonNull(GraphQLString) }
   },
   resolve: (root, {id}) => deleteTodoItem(id)
 }
