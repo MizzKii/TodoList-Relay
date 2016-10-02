@@ -39,17 +39,19 @@ you can test on URL `http://localhost:3000/graphql`</pre>
 <u>example</u>
 <pre>
   mutation {
-    addTodo (title: "new 4", description: "To do something.") {
+    addTodo (title: "new todo", description: "To do something.") {
       id
       title
       description
     }
-    editTodo (id: 4, title: "Todo 4", description: "Edit now") {
+  }
+  mutation {
+    editTodo (id: "57f0b3ad1cc5c180c536755d", title: "Todo 4", description: "Edit now") {
       id
       title
       description
     }
-    deleteTodo(id: 4) {
+    deleteTodo(id: "57f0b3ad1cc5c180c536755d") {
       id
       title
       description
