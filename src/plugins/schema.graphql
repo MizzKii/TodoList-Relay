@@ -1,0 +1,99 @@
+input CreateTodoInput {
+  title: String!
+  description: String!
+  clientMutationId: String
+}
+
+type CreateTodoPayload {
+  todoEdge: TodoEdge
+  viewer: Viewer
+  clientMutationId: String
+}
+
+input DeleteTodoInput {
+  todoID: ID
+  clientMutationId: String
+}
+
+type DeleteTodoPayload {
+  viewer: Viewer
+  todoID: ID
+  clientMutationId: String
+}
+
+type Mutation {
+  createTodo(input: CreateTodoInput!): CreateTodoPayload
+  deleteTodo(input: DeleteTodoInput!): DeleteTodoPayload
+}
+
+# An object with an ID
+interface Node {
+  # The id of the object.
+  id: ID!
+}
+
+# Information about pagination in a connection.
+type PageInfo {
+  # When paginating forwards, are there more items?
+  hasNextPage: Boolean!
+
+  # When paginating backwards, are there more items?
+  hasPreviousPage: Boolean!
+
+  # When paginating backwards, the cursor to continue.
+  startCursor: String
+
+  # When paginating forwards, the cursor to continue.
+  endCursor: String
+}
+
+type Query {
+  # Fetches an object given its ID
+  node(
+    # The ID of an object
+    id: ID!
+  ): Node
+  viewer: Viewer
+}
+
+# todo item description
+type Todo implements Node {
+  # The ID of an object
+  id: ID!
+
+  # title for todo item
+  title: String
+
+  # description for todo item
+  description: String
+}
+
+# A connection to a list of items.
+type TodoConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [TodoEdge]
+}
+
+# An edge in a connection.
+type TodoEdge {
+  # The item at the end of the edge
+  node: Todo
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# Parent of todo queries.
+type Viewer implements Node {
+  # The ID of an object
+  id: ID!
+
+  # find by title
+  todo(title: String!, after: String, first: Int, before: String, last: Int): TodoConnection
+
+  # get all todo list
+  todos(after: String, first: Int, before: String, last: Int): TodoConnection
+}

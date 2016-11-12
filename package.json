@@ -4,12 +4,13 @@
   "description": "change to relay",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run update-schema && webpack && node src/index.js",
+    "dev": "nodemon src/index.js",
+    "update-schema": "babel-node ./src/scripts/updateSchema.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MizzKii/start-relay.git"
+    "url": "git+https://github.com/MizzKii/TodoList-Relay.git"
   },
   "engines": {
     "node": "6.6.0",
@@ -25,21 +26,46 @@
   "author": "Panudech Chuangnuktum",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MizzKii/start-relay/issues"
+    "url": "https://github.com/MizzKii/TodoList-Relay/issues"
   },
-  "homepage": "https://github.com/MizzKii/start-relay#readme",
+  "homepage": "https://github.com/MizzKii/TodoList-Relay#readme",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-polyfill": "^6.16.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
-    "babel-preset-stage-0": "^6.5.0"
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-relay-plugin": "^0.9.3",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.1",
+    "eslint-plugin-react": "^6.6.0",
+    "nodemon": "^1.11.0",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^2.1.0-beta.10"
   },
   "dependencies": {
+    "autoprefixer": "^6.5.1",
+    "css-loader": "^0.25.0",
     "express": "^4.14.0",
     "express-graphql": "^0.5.4",
     "graphql": "^0.7.0",
-    "mongoose": "^4.6.1"
+    "graphql-relay": "^0.4.3",
+    "mongoose": "^4.6.1",
+    "node-sass": "^3.11.2",
+    "postcss-loader": "^1.1.0",
+    "precss": "^1.4.0",
+    "react": "^15.3.2",
+    "react-bootstrap": "^0.30.6",
+    "react-dom": "^15.3.2",
+    "react-relay": "^0.9.3",
+    "react-router": "^3.0.0",
+    "react-router-relay": "^0.13.5",
+    "relay-mongodb-connection": "^2.1.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1"
   }
 }

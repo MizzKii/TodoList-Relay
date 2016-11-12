@@ -1,5 +1,7 @@
 <h3>TodoList with relay</h3>
 
+<img src="./readme/Screen.png" />
+
 <h4>Requirement</h4>
 <pre>
   node.js (recommend v6.6.0)
@@ -11,30 +13,41 @@
 <pre>
   babel
   express
-  express-graphql
   graphql
   mongoose
+  react
+  relay
 </pre>
 
 <h4>Update</h4>
 <pre>
-  Add mongodb to TodoList.
-  you can test on URL `http://localhost:3000/graphql`
+  Now you can view todo list at http://localhost:3000
+  And try to query at `http://localhost:3000/graphql`
 </pre>
 
 <h4>Query</h4>
 <u>example</u>
 <pre>
   query {
-    findTodo(title: "Todo 1") {
-      id
-      title
-      description
-    }
-    allTodo {
-      id
-      title
-      description
+  	viewer {
+      todo (title: "title") {
+        edges {
+          node {
+            id
+            title
+            description
+          }
+        }
+      }
+      todos {
+        edges {
+          node {
+            id
+            title
+            description
+          }
+        }
+      }
     }
   }
 </pre>
@@ -43,22 +56,38 @@
 <u>example</u>
 <pre>
   mutation {
-    addTodo (title: "new todo", description: "To do something.") {
-      id
-      title
-      description
+    createTodo(input: {title: "Title 1", description: "Description 1"}) {
+      todoEdge {
+        node {
+          id
+          title
+          description
+        }
+      }
+      viewer {
+        todos {
+          edges {
+            node {
+              id
+              title
+              description
+            }
+          }
+        }
+      }
     }
-  }
-  mutation {
-    editTodo (id: "57f0b3ad1cc5c180c536755d", title: "Todo 4", description: "Edit now") {
-      id
-      title
-      description
-    }
-    deleteTodo(id: "57f0b3ad1cc5c180c536755d") {
-      id
-      title
-      description
+    deleteTodo(input: {todoID: "VG9kbzo1ODI3M2VjODVkMTE5MDYyZjdmNWQ1YjY="}) {
+      viewer {
+        todos {
+          edges {
+            node {
+              id
+              title
+              description
+            }
+          }
+        }
+      }
     }
   }
 </pre>
