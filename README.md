@@ -1,6 +1,13 @@
 <h3>TodoList with relay</h3>
-
+<br/>
+<pre>    After I tried Relay, That I thought Relay's good choice for new project with React and GraphQL
+  But your project use Redux and you interesting GraphQL I think Apollo's good choice.
+</pre>
+<br/>
+<h4>Screen</h4>
 <img src="./readme/Screen.png" />
+<pre> You can add by form left side and delete by click the card of todo.
+</pre>
 
 <h4>Requirement</h4>
 <pre>
@@ -92,5 +99,8 @@
   }
 </pre>
 
-<pre>Thank https://github.com/lvarayut/relay-fullstack
+<pre>Thank
+  https://github.com/lvarayut/relay-fullstack
+  http://learnrelay.org/
+  https://facebook.github.io/relay/
 This project for learn.</pre>
