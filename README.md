@@ -1,11 +1,10 @@
 <h3>TodoList with relay</h3>
-<br/>
 <pre>    After I tried Relay, That I thought Relay's good choice for new project with React and GraphQL
   But your project use Redux and you interesting GraphQL I think Apollo's good choice.
 </pre>
 <br/>
 <h4>Screen</h4>
-<img src="./readme/Screen.png" />
+<img src="./doc/assets/Screen.png" />
 <pre> You can add by form left side and delete by click the card of todo.
 </pre>
 
@@ -26,10 +25,24 @@
   relay
 </pre>
 
-<h4>Update</h4>
+<h4>Start</h4>
+<pre>
+  // install all dependency
+  npm i
+  // start
+  npm run start
+  // start with development
+  npm run dev
+</pre>
 <pre>
   Now you can view todo list at http://localhost:3000
   And try to query at `http://localhost:3000/graphql`
+</pre>
+
+<h4>Test</h4>
+<pre>
+  // run simple test case for graphql server
+  npm run test
 </pre>
 
 <h4>Query</h4>

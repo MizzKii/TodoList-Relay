@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run update-schema && webpack && node src/index.js",
     "dev": "nodemon src/index.js",
-    "update-schema": "babel-node ./src/scripts/updateSchema.js"
+    "update-schema": "babel-node ./src/scripts/updateSchema.js",
+    "test": "babel-node ./test/graphqlServer.js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.1",
     "eslint-plugin-react": "^6.6.0",
+    "graphql-tester": "0.0.5",
     "nodemon": "^1.11.0",
     "webpack": "^2.1.0-beta.25",
     "webpack-dev-server": "^2.1.0-beta.10"
@@ -52,7 +54,7 @@
     "css-loader": "^0.25.0",
     "express": "^4.14.0",
     "express-graphql": "^0.5.4",
-    "graphql": "^0.7.0",
+    "graphql": "^0.7.2",
     "graphql-relay": "^0.4.3",
     "mongoose": "^4.6.1",
     "node-sass": "^3.11.2",
