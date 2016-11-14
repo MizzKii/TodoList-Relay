@@ -129,7 +129,7 @@
 <h4>Route</h4>
   If you used react-router, That you will apply middleware react-router-relay.
 <pre>
-  <Router render={applyRouterMiddleware(useRelay.default)} ... />
+  Router render={applyRouterMiddleware(useRelay.default)}
 </pre>
 <h4>Root Query</h4>
   Routes will be got query. That it send query to Relay container.
