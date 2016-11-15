@@ -1,0 +1,19 @@
+version: "2"
+services:
+
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+
+  node:
+    build: ./docker/nodejs
+    volumes:
+      - ./:/usr/src/TodoList-Relay
+    ports:
+      - 8080:8080
+    links:
+      - mongo
+    environment:
+      - NODE_ENV=production
+      - PORT=8080
